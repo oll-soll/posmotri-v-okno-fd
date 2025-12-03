@@ -60,8 +60,9 @@ ol {
 }
 
 .result {
-  width: 711px;
-  height: 458px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .result__video-container {
@@ -75,6 +76,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center
 }
 
 .search-form {
@@ -122,8 +124,11 @@ ol {
 
 input[type="text"] {
   font-family: inherit;
-  width: 225px;
-  height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  min-width: 225px;
+  min-height: 27px;
   border-right: none;
   border-left: none;
   border-top: 1px solid #fff;
@@ -168,6 +173,7 @@ input[type="text"] {
 }
 
 .button {
+  min-height: 34px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -196,12 +202,11 @@ input[type="text"] {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
+  min-height: 34px;
   align-self: flex-end;
 }
 
 .content__details {
-  padding-top: 25px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -259,13 +264,13 @@ input[type="text"] {
   outline: 1px solid #fff;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link_current {
   background-color: #545050;
   display: block;
-}
-
-.content__card-link_current:hover {
-  background-color: #545050;
 }
 
 .content__video-card {
@@ -312,7 +317,6 @@ input[type="text"] {
 
 .more-button {
   width: 100%;
-  min-height: 34px;
 }
 
 /* Кастомный скроллбар */
